@@ -43,24 +43,26 @@ const App = () => {
     };
 
     fetchRobots();
-  }, []);
+  }, []);
 
-
-/*const filteredRobots = robots.filter(robot =>
-  robot.name.toLowerCase().includes(searchfield.toLowerCase())
-);
-
-const onSearchChange = (event) => {
-  setSearchfield(event.target.value);
-};
-
-return (
-  <div className='tc'>
-    <h1>Robo Friends</h1>
-    <SearchBox searchfield={searchfield} searchchange={onSearchChange} />
-    <CardList robots={filteredRobots} />
-  </div>
-);*/
-};
-
-export default App;
+  const onSearchChange = (event) => {
+    setSearchfield(event.target.value);
+  };
+  
+  const filteredRobots = robots.filter(robot =>
+    robot.name.toLowerCase().includes(searchfield.toLowerCase())
+  );
+  
+  return (
+    <div className='tc'>
+      <h1>Robo Friends</h1>
+      <SearchBox searchchange={onSearchChange} />
+      {/*</Scroll>*/}
+      <CardList robots={filteredRobots} />
+      {/*</Scroll>*/}
+    </div>
+  );
+  };
+  
+  export default App;
+  
