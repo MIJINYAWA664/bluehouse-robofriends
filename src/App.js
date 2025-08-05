@@ -25,7 +25,9 @@ function App() {
 import React, { useState, useEffect } from 'react';
 import CardList from "./CardList";    
 import SearchBox from './SearchBox';
+import 'tachyons'
 // import Scroll from './Scroll';
+
 
 const App = () => {
   const [robots, setRobots] = useState([]);

@@ -1,5 +1,5 @@
 import React from "react";
-const SearchBox = ({ searchfield, searchchange }) => {
+const SearchBox = ({ searchfield, searchchange }) => (
     <div className="pa2">
         <input 
         className="pa3 ba b--green bg-lightest-blue"
@@ -8,5 +8,5 @@ const SearchBox = ({ searchfield, searchchange }) => {
         onChange={searchchange}
         />
     </div>
-}
+);
 export default SearchBox;
